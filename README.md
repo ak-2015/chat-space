@@ -22,3 +22,15 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# Chat-Space DB設計
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_name|string|null: false, index: true|
+|email|string|null: false|
+|password|string|null: false|
+### Association
+- has_many :groups_users
+- has_many :groups, through: :groups_users
+- has_many :messages
