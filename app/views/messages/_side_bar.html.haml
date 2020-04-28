@@ -1,1 +1,15 @@
-＜サイドバー＞
+.side-bar
+  .header
+    .header-items
+      .header-items__name
+        User Name
+      %ul.header-items__icons
+        %li.icon
+        = link_to "#" do
+          = icon('fa', 'edit',class: "icon")
+          %span<>
+        %li.icon
+        = link_to "#" do
+          = icon('fa', 'cog',class: "icon")
+          %span<>
+  .main
