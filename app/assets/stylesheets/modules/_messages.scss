@@ -41,6 +41,16 @@
   .main {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
+    .main-items {
+      padding:20px 20px 40px;
+      &__group-name {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__message {
+        font-size:11px;
+      }
+    }
   }
 }
 
