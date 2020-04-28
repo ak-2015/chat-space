@@ -1,1 +1,15 @@
-＜チャット画面＞
+.chat-main
+  .header
+    .group
+      .group__group-name
+        group-name
+      %ul.group__members
+        Member : 
+        %li.member
+          member1
+        %li.member
+          member2
+    =link_to "#", class: "edit-btn" do
+      Edit
+  .main
+  .ooter
