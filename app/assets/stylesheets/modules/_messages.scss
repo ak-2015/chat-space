@@ -1,3 +1,62 @@
 * {
   box-sizing: border-box;
 }
+
+.wrapper {
+  display:flex;
+  height:100vh;
+}
+
+.side-bar {
+  width:300px;
+  color: #ffffff;
+  font-weight: bold;
+  .header {
+    height: 100px;
+    background-color: #253141;
+    display: flex;
+    .header-items {
+      height: 20px;
+      width:260px;
+      margin: auto;
+      line-height: 20px;
+      display: flex;
+      justify-content: space-between;
+      &__name {
+        font-size: 16px;
+      }
+      &__icons {
+        width:60px;
+        display: flex;
+        justify-content: flex-end;
+        color: #ffffff;
+        .icon {
+          display:inline-block;
+          margin-left: 5px;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  .main {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+  }
+}
+
+.chat-main{
+  width: calc(100vw - 300px);
+  &__header {
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom: solid 1px #eeeeee;
+  }
+  &__main {
+    height: calc(100vh - 100px - 90px);
+    background-color: #fafafa;
+  }
+  &__footer {
+    height: 90px;
+    background-color: #d2d2d2;
+  }
+}
