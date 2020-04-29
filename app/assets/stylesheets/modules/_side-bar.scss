@@ -1,0 +1,47 @@
+.side-bar {
+  width:300px;
+  color: $white;
+  .header {
+    height: 100px;
+    background-color: $side-barHeaderColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .header-items {
+      height: 20px;
+      width:260px;
+      line-height: 20px;
+      display: flex;
+      justify-content: space-between;
+      &__name {
+        font-size: 16px;
+        font-weight: bold;
+        width: calc(100% - 60px);
+      }
+      &__icons {
+        width:60px;
+        .icon {
+          float: right;
+          display:inline-block;
+          margin-left: 5px;
+          color: $white;
+        }
+      }
+    }
+  }
+  .main {
+    height: calc(100vh - 100px);
+    background-color: $side-barMainColor;
+    overflow: scroll;
+    .main-items {
+      padding:20px 20px 40px;
+      &__group-name {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__message {
+        font-size:11px;
+      }
+    }
+  }
+}
