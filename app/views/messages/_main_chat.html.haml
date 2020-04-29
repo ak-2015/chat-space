@@ -1,0 +1,49 @@
+.chat-main
+  .header
+    .group
+      .group__group-name
+        group-name
+      %ul.group__members
+        Member : 
+        %li.member
+          member1
+        %li.member
+          member2
+    =link_to "#", class: "edit-btn" do
+      Edit
+  .main
+    .message-items
+      .message-items__title
+        .member
+          masa
+        .timestamp
+          2019/11/20(Wed)17:43:01
+      .message-items__message
+        おはよう
+    .message-items
+      .message-items__title
+        .member
+          masa
+        .timestamp
+          2019/11/20(Wed)17:43:01
+      .message-items__message
+        こんにちは
+    .message-items
+      .message-items__title
+        .member
+          masa
+        .timestamp
+          2019/11/20(Wed)17:43:01
+      .message-items__message
+        おやすみ
+  .footer
+    %form.box
+      %input.box__text{type: 'text', placeholder: 'type a message'}
+      %label
+        %input.box__file-btn{type: 'file'}
+        %span.box__icon
+          = icon('fa', 'image',class: "icon")
+    %form
+      %input.send-btn{type: 'submit', value: 'Send', style: 'cursor:pointer'}
+
+
