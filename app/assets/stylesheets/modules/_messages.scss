@@ -10,10 +10,10 @@
 
 .side-bar {
   width:300px;
-  color: #ffffff;
+  color: $white;
   .header {
     height: 100px;
-    background-color: #253141;
+    background-color: $side-barHeaderColor;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,14 +34,14 @@
           float: right;
           display:inline-block;
           margin-left: 5px;
-          color: #ffffff;
+          color: $white;
         }
       }
     }
   }
   .main {
     height: calc(100vh - 100px);
-    background-color: #2f3e51;
+    background-color: $side-barMainColor;
     overflow: scroll;
     .main-items {
       padding:20px 20px 40px;
@@ -60,7 +60,7 @@
   width: calc(100vw - 300px);
   .header {
     height: 100px;
-    background-color: #ffffff;
+    background-color: $white;
     border-bottom: solid 1px #eeeeee;
     padding: 0 40px;
     .group{
@@ -68,13 +68,13 @@
       &__group-name {
         margin-top: 35px;
         font-size: 20px;
-        color:#333333;
+        color:$fontDarkBlack;
       }
       &__members {
         display: flex;
         margin-top: 15px;
         font-size: 12px;
-        color:#999999;
+        color:$fontLightGray;
         .member {
           display: inline-block;
           margin-left:5px;
@@ -90,14 +90,14 @@
       height: 40px;
       line-height: 40px;
       padding: 0 20px;
-      border: solid 1px #38aef0;
+      border: solid 1px $lightBlue;
       font-size: 16px;
-      color: #38aef0;
+      color: $lightBlue;
     }
   }
   .main {
     height: calc(100vh - 100px - 90px);
-    background-color: #fafafa;
+    background-color: $mainMainColor;
     padding: 35px 40px 0;
     overflow: scroll;
     .message-items {
@@ -105,39 +105,39 @@
         margin-bottom: 12px;
         display: flex;
         .member {
-          color: #333333;
+          color: $fontDarkBlack;
           font-size: 16px;
           font-weight: bold;
         }
         .timestamp {
-          color: #999999;
+          color: $fontLightGray;
           font-size: 12px;
           padding-left: 10px;
         }
       }
       &__message {
         margin-bottom: 46px;
-        color: #434a54;
+        color: $fontDarkGray;
         font-size: 14px;
       }
     }
   }
   .footer {
     height: 90px;
-    background-color: #d2d2d2;
+    background-color: $mainFooterColor;
     padding: 20px 40px;
     .box {
       float: left;
       width: calc(100vw - 300px - 40px - 15px - 100px - 40px);
       height: 50px;
-      background-color: #fafafa;
+      background-color: $white;
       &__text {
         float: left;
         padding: 0 10px;
         height: 50px;
         width: calc(100% - 40px);
         border: none;
-        background-color: #fafafa;
+        background-color: $white;
       }
       &__file-btn{
         display: none;
@@ -147,7 +147,7 @@
         margin: auto 10px;
         font-size: 20px;
         line-height: 50px;
-        background-color:#fafafa;
+        background-color:$white;
       }
       &__icon :hover {
         cursor: pointer;
@@ -158,8 +158,8 @@
       width: 100px;
       height: 50px;
       margin-left: 15px;
-      background-color: #38aef0;
-      color: #fafafa;
+      background-color: $lightBlue;
+      color: $white;
       text-decoration: none;
       text-align: center;
       line-height: 50px;
