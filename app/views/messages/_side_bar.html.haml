@@ -2,14 +2,14 @@
   .header
     .header-items
       .header-items__name
-        user name
+        =current_user.name
       %ul.header-items__icons
         %li.icon
         = link_to "#" do
           = icon('fa', 'edit',class: "icon")
           %span<>
         %li.icon
-        = link_to "#" do
+        = link_to edit_user_path(current_user) do
           = icon('fa', 'cog',class: "icon")
           %span<>
   .main
