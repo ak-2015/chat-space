@@ -5,7 +5,7 @@
         =current_user.name
       %ul.header-items__icons
         %li.icon
-        = link_to "#" do
+        = link_to new_group_path do
           = icon('fa', 'edit',class: "icon")
           %span<>
         %li.icon
@@ -13,13 +13,10 @@
           = icon('fa', 'cog',class: "icon")
           %span<>
   .main
-    .main-items
-      .main-items__group-name
-        group name 1
-      .main-items__message
-        message 1
-    .main-items
-      .main-items__group-name
-        group name 2
-      .main-items__message
-        message 2
+    - current_user.groups.each do |group|
+      .main-items
+        = link_to '#' do
+          .main-items__group-name
+            = group.name
+          .main-items__message
+            messageはまだありません（仮）
