@@ -40,9 +40,8 @@
     = form_for [@group, @message] do |f|
       .box
         = f.text_field :content, class: 'box__text', placeholder: 'type a message'
-        = f.label :image do
-          = f.file_field, class: 'box__file-btn'
-          = span class: 'box__icon'
+        %label
+          = f.file_field :image, class: 'box__file-btn'
+          .box__icon
             = icon('fas', 'image',class: 'icon')
       = f.submit 'Send', class: 'send-btn'
-
