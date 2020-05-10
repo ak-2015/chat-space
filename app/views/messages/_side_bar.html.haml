@@ -15,7 +15,7 @@
   .main
     - current_user.groups.each do |group|
       .main-items
-        = link_to '#' do
+        = link_to group_messages_path(group.id) do
           .main-items__group-name
             = group.name
           .main-items__message
