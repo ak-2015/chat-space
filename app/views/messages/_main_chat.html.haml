@@ -37,13 +37,12 @@
       .message-items__message
         おやすみ
   .footer
-    %form
+    = form_for [@group, @message] do |f|
       .box
-        %input.box__text{type: 'text', placeholder: 'type a message'}
-        %label
-          %input.box__file-btn{type: 'file'}
-          %span.box__icon
-            = icon('fa', 'image',class: "icon")
-      %input.send-btn{type: 'submit', value: 'Send', style: 'cursor:pointer'}
-
+        = f.text_field :content, class: 'box__text', placeholder: 'type a message'
+        = f.label :image do
+          = f.file_field, class: 'box__file-btn'
+          = span class: 'box__icon'
+            = icon('fas', 'image',class: 'icon')
+      = f.submit 'Send', class: 'send-btn'
 
