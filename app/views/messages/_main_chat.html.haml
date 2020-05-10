@@ -9,7 +9,7 @@
           member1
         %li.member
           member2
-    =link_to new_group_path, class: "edit-btn" do
+    =link_to edit_group_path(@group.id), class: "edit-btn" do
       Edit
   .main
     = render partial: 'message', collection: @messages
