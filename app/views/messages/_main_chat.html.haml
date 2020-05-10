@@ -12,8 +12,7 @@
     =link_to new_group_path, class: "edit-btn" do
       Edit
   .main
-    - @messages.each do |message|
-      = render partial: "message-items", locals: { message: message }
+    = render partial: 'message', collection: @messages
   .footer
     = form_for [@group, @message] do |f|
       .box
