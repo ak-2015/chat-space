@@ -66,6 +66,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.chat-main').find('.main').append(html);
+      $('.chat-main').find('.main').animate({ scrollTop: $('.chat-main').find('.main')[0].scrollHeight});
       $('form')[0].reset();
     })
   })
