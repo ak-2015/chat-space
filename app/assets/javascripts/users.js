@@ -18,6 +18,15 @@ $(function() {
     $('#user-search-result').append(html);
 }
 
+  function appendUserToList(userName, userId) {
+    let html = `
+    <div class="chat-group-user clearfix" id="${userId}">
+      <p class="chat-group-user__name">${userName}</p>
+      <div class="user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn" data-user-id="${userId}" data-user-name="${userName}">削除</div>
+    </div>`;
+    $(".js-add-user").append(html);
+  }
+
   $("#user-search-field").on("keyup", function() {
     let input = $(this).val();
     $.ajax({
@@ -45,6 +54,9 @@ $(function() {
 
   $(document).on('click', ".chat-group-user__btn--add", function() {
     $(this).parent().remove();
+    let userName = $(this).attr("data-user-name");
+    let userId = $(this).attr("data-user-id");
+    appendUserToList(userName, userId);
   });
   
 });
