@@ -1,6 +1,6 @@
 $(function() {
 
-  function  appendUser(user){
+  function  appendUserToSearchResult(user){
     let html = `
               <div class="chat-group-user clearfix">
                 <p class="chat-group-user__name"> ${user.name} </p>
@@ -10,7 +10,7 @@ $(function() {
     $('#user-search-result').append(html);
   }
 
-  function  appendErrMsg(msg){
+  function  appendErrMsgToSearchResult(msg){
     let html = `
                <div class="chat-group-user clearfix">
                 <p class="chat-group-user__name"> ${msg} </p>
@@ -39,12 +39,12 @@ $(function() {
       $('#user-search-result').empty();
       if (users.length !== 0) {
         users.forEach(function(user){
-          appendUser(user);
+          appendUserToSearchResult(user);
         });
       } else if (input.length === 0) {
         return false;
       } else {
-        appendErrMsg("ユーザーが見つかりません");
+        appendErrMsgToSearchResult("ユーザーが見つかりません");
       }
     })
     .fail(function() {
