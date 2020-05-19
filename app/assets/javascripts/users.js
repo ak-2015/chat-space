@@ -27,6 +27,12 @@ $(function() {
     $(".js-add-user").append(html);
   }
 
+  function addMemberToDB(userId) {
+    let html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />`;
+    console.log(html);
+    $(`#${userId}`).append(html);
+  }
+
   $("#user-search-field").on("keyup", function() {
     let input = $(this).val();
     $.ajax({
@@ -57,6 +63,7 @@ $(function() {
     let userName = $(this).attr("data-user-name");
     let userId = $(this).attr("data-user-id");
     appendUserToList(userName, userId);
+    addMemberToDB(userId)
   });
   
   $(document).on('click', ".chat-group-user__btn--remove", function() {
