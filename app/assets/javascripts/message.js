@@ -104,5 +104,9 @@ $(function(){
       $('.send-btn').prop('disabled', false);
     });
   })
-  reloadMessages();
+  
+  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+    setInterval(reloadMessages, 7000);
+  }
+
 })
