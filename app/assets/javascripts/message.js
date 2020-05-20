@@ -1,5 +1,20 @@
 $(function(){
+
   var reloadMessages = function() {
+    let last_message_id = $('.message-items:last').data("message-id");
+    $.ajax({
+      url: './api/messages',
+      type: 'get',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      console.log("success");
+    })
+    .fail(function() {
+      console.log("error");
+    });
+    
   };
 
   function buildHTML(message) {
@@ -82,5 +97,5 @@ $(function(){
       $('.send-btn').prop('disabled', false);
     });
   })
-  setInterval(reloadMessages, 7000);
+  reloadMessages();
 })
