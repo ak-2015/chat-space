@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message) {
     if (message.content && message.image) {
       var html =
-        `<div class="message-items">
+        `<div class="message-items" data-message-id=${message.id}>
           <div class="message-items__title">
             <div class="member">
               ${message.member}
@@ -20,7 +20,7 @@ $(function(){
         </div>`
     } else if (message.content) {
       var html =
-        `<div class="message-items">
+        `<div class="message-items" data-message-id=${message.id}>
           <div class="message-items__title">
             <div class="member">
               ${message.member}
@@ -37,7 +37,7 @@ $(function(){
         </div>`
     } else if (message.image) {
       var html =
-        `<div class="message-items">
+        `<div class="message-items" data-message-id=${message.id}>
           <div class="message-items__title">
             <div class="member">
               ${message.member}
