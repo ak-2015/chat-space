@@ -1,4 +1,7 @@
 $(function(){
+  var reloadMessages = function() {
+  };
+
   function buildHTML(message) {
     if (message.content && message.image) {
       var html =
@@ -79,4 +82,5 @@ $(function(){
       $('.send-btn').prop('disabled', false);
     });
   })
+  setInterval(reloadMessages, 7000);
 })
